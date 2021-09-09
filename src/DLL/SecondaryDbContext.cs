@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DLL
 {
-    public class ApplicationDbContext : DbContext
+   public class SecondaryDbContext :DbContext
     {
-        public ApplicationDbContext(DbContextOptions options) : base(options)
+        public SecondaryDbContext(DbContextOptions options) : base(options)
         {
         }
 

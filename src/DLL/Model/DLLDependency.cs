@@ -18,6 +18,10 @@ namespace DLL.Model
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("MvcMovieContext")));
 
+
+            services.AddDbContext<SecondaryDbContext>(options =>
+                options.UseSqlServer(configuration.GetConnectionString("MvcMovieContext123")));
+
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddTransient<IProductRepository, ProductRepository>();
         }
